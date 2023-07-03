@@ -1,2 +1,2 @@
 # Jogo da Memoria
- Jogo da Memória com HTML, CSS e JS
+ Jogo da Memória feito com HTML, CSS e JS
