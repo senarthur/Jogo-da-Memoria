@@ -1,0 +1,113 @@
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #5c5c5c;
+}
+
+.game-canva {
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 50px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 auto 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    aspect-ratio: 3/4;
+    width: 100%;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.card {
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #333333b7;
+    border-radius: 8px;
+    transition: all 300ms ease;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.back {
+    background-image: url('../images/back.png');
+    backface-visibility: hidden;
+}
+
+.reveal-card {
+    transform: rotateY(180deg);
+}
+
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0.5;
+}
+
+.end-game {
+    position: absolute;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+}
+
+.end-game p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.end-game button {
+    font-size: 17px;
+    padding: 10px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.end-game button:hover {
+    background-color: #d1b630;
+    color: #fff;
+}
+
+.display-none {
+    display: none;
+}
+
+
